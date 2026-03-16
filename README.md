@@ -44,18 +44,19 @@ STIGS Tested:  1. WN11-00-000165 - The Server Message Block (SMB) v1 protocol mu
 
 
 
-1. For this STIG I used this script to toggle SMB v1 protocol on (or off) :
+1. For this STIG I used the following script in Powershell ISE (in Admin) to toggle SMB v1 protocol on (or off) :
    
-**Disable SMBv1**
-Set-SmbServerConfiguration -EnableSMB1Protocol $false -Force
-Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol -NoRestart
+  **Disable SMBv1**
+  Set-SmbServerConfiguration -EnableSMB1Protocol $false -Force
+  Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol -NoRestart
 
 
 3. For this STIG I manually went to **Start** >> typed **Computer Management** and then went to **Local Users and Groups** >> Users and double clicked **Guest** went into properties and disabled it again.  
 
 
-4. For this STIG I used this script to disable the Telnet Client : 
+4. For this STIG I used the following script in Powershell ISE (in Admin) to disable the Telnet Client : 
 
+    **Toggle Telnet**
     Disable-WindowsOptionalFeature -Online -FeatureName TelnetClient   
 
 
