@@ -13,12 +13,6 @@ STIG report for Cyber Range Internship
     Last Modified   : 2026-03-16
     
 
-.TESTED ON
-    Date(s) Tested  : 2026-03-16
-    Tested By       : Kemar Morrison
-    Systems Tested  : 
-    PowerShell Ver. : 
-
 .Setup: The VM was created in Azure. Vulnerabilities where either created by scripts or manually.
 
 .Tools:  
