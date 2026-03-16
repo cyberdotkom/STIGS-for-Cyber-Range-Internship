@@ -44,28 +44,28 @@ STIGS Tested:  1. WN11-00-000165 - The Server Message Block (SMB) v1 protocol mu
 
 
 
-1. For this STIG I used this script to toggle SMB v1 protocol on (or off) : 
-
-  # Disable SMBv1
+1. For this STIG I used this script to toggle SMB v1 protocol on (or off) :
+   
+**Disable SMBv1**
 Set-SmbServerConfiguration -EnableSMB1Protocol $false -Force
 Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol -NoRestart
 
 
-2. For this STIG I manually went to **Start** >> typed **Computer Management** and then went to **Local Users and Groups** >> Users and double clicked **Guest** went into properties and disabled it again.  
+3. For this STIG I manually went to **Start** >> typed **Computer Management** and then went to **Local Users and Groups** >> Users and double clicked **Guest** went into properties and disabled it again.  
 
 
-3. For this STIG I used this script to disable the Telnet Client : 
+4. For this STIG I used this script to disable the Telnet Client : 
 
     Disable-WindowsOptionalFeature -Online -FeatureName TelnetClient   
 
 
-4. For this STIG I manually configured the local policy for the VM. I did the following: Configure the policy value for Computer Configuration >> Administrative Templates >> System >> Internet Communication Management >> Internet Communication settings >> 'Turn off printing over HTTP' to 'Enabled' and selected " Apply" 
+5. For this STIG I manually configured the local policy for the VM. I did the following: Configure the policy value for Computer Configuration >> Administrative Templates >> System >> Internet Communication Management >> Internet Communication settings >> 'Turn off printing over HTTP' to 'Enabled' and selected " Apply" 
 
 
-5. For this STIG I just renamed the "Guest" account to Nonna by going to to **Start** >> typed **Computer Management** and then went to **Local Users and Groups** >> Users and double clicked **Guest** went into properties and renaming it Nonna 
+6. For this STIG I just renamed the "Guest" account to Nonna by going to to **Start** >> typed **Computer Management** and then went to **Local Users and Groups** >> Users and double clicked **Guest** went into properties and renaming it Nonna 
 
 
-6. For this STIG I manually configured the local policy for the VM. I did the following: Set the policy value for 'Computer Configuration >> Administrative Templates >> Windows Components >> Internet Explorer >>  Disable Internet Explorer 11 as a standalone browser' to 'Enabled' with the option value set to 'Never' and selected " Apply" 
+7. For this STIG I manually configured the local policy for the VM. I did the following: Set the policy value for 'Computer Configuration >> Administrative Templates >> Windows Components >> Internet Explorer >>  Disable Internet Explorer 11 as a standalone browser' to 'Enabled' with the option value set to 'Never' and selected " Apply" 
 
  
 
